@@ -26,6 +26,8 @@ function noSearchDefaultPageRender() {
         <a href="https://x.com/theo" target="_blank">theo</a>
         •
         <a href="https://github.com/t3dotgg/unduck" target="_blank">github</a>
+        •
+        <a href="https://github.com/valsoray-dev" target="_blank">valsoray-dev</a>
       </footer>
     </div>
   `;
@@ -61,7 +63,7 @@ function getBangredirectUrl() {
   const selectedBang = bangs.find((b) => b.t === bangCandidate) ?? defaultBang;
 
   // Remove the first bang from the query
-  const cleanQuery = query.replace(/!\S+\s*/i, "").trim();
+  const cleanQuery = query.replace(/!\s*\S+\s*/i, " ").trim();
 
   // Format of the url is:
   // https://www.google.com/search?q={{{s}}}
